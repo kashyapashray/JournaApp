@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/entryListFragment">
+
+  <fragment
+      android:id="@+id/entryListFragment"
+      android:name="androidsamples.java.journalapp.EntryListFragment"
+      android:label="fragment_entry_list"
+      tools:layout="@layout/fragment_entry_list">
+    <action
+        android:id="@+id/addEntryAction"
+        app:destination="@id/entryDetailsFragment" />
+    <action
+        android:id="@+id/toInfoAction"
+        app:destination="@id/infoFragment" />
+  </fragment>
+  <fragment
+      android:id="@+id/entryDetailsFragment"
+      android:name="androidsamples.java.journalapp.EntryDetailsFragment"
+      android:label="fragment_entry_details"
+      tools:layout="@layout/fragment_entry_details">
+    <argument
+        android:name="JEntry"
+        app:argType="boolean"
+        android:defaultValue="false" />
+    <argument
+        android:name="opCreateUpdateDelete"
+        app:argType="integer"
+        android:defaultValue="1" />
+    <argument
+        android:name="optionalIndex"
+        app:argType="integer"
+        android:defaultValue="0" />
+    <action
+        android:id="@+id/date_picker_dialog"
+        app:destination="@id/date_picker_dialog" />
+    <action
+        android:id="@+id/time_picker_dialog"
+        app:destination="@id/time_picker_dialog" />
+    <action
+        android:id="@+id/action_cancel_input"
+        app:destination="@id/delete_alert" />
+  </fragment>
+
+  <dialog
+      android:id="@+id/date_picker_dialog"
+      android:label="date_picker_dialog"
+      tools:layout="@layout/date_picker_dialog"
+      android:name="androidsamples.java.journalapp.DatePickerFragment" />
+
+  <dialog
+      android:id="@+id/time_picker_dialog"
+      android:label="time_picker_dialog"
+      tools:layout="@layout/time_picker_dialog"
+      android:name="androidsamples.java.journalapp.TimePickerFragment" >
+    <argument
+        android:name="time_type"
+        app:argType="string" />
+  </dialog>
+
+  <dialog
+      android:id="@+id/delete_alert"
+      android:label="cancel_input_dialog"
+      tools:layout="@layout/delete_alert"
+      android:name="androidsamples.java.journalapp.DeleteAlertFragment" />
+
+  <fragment
+      android:id="@+id/infoFragment"
+      android:name="androidsamples.java.journalapp.InfoFragment"
+      android:label="fragment_info"
+      tools:layout="@layout/fragment_info" />
+</navigation>
