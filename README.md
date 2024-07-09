@@ -1,4 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/XNhTFXWh)
 # JournalApp
 
 # Programmer's Setup
@@ -7,10 +6,6 @@ If local repo exists before this commit run the following commands\
 ```git rm -cached .idea/misc.xml```\
 Commits might be staged after that so use
 ```git restore --stage ./<filepath?>/filename```
-
-# Contributors
-    Saahir Vaidya   2020B3A71142G   f20201142@goa.bits-pilani.ac.in
-    Ashray Kashyap  2020B3A70494G   f20200494@goa.bits-pilani.ac.in
 
 # Description
  1. MainActivity hosts the navgraph. The List Fragment shows the list of all entries in the journal_database using a LiveData observer 
@@ -46,12 +41,6 @@ The Room database was tested for Insert, Update and Delete operations.
  and Instrumented Tests using UI  
  The Room database was tested for Insert, Update and Delete operations.
  Espresso was used for Accessibility Testing
-
-# Hours to complete
-15
-
-# Difficulty
-5/10
 
 # Resources
 https://stackoverflow.com/questions/34636934/android-data-binding-setsupportactionbar
